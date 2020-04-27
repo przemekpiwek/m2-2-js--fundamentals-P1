@@ -13,6 +13,8 @@
 // Otherwise returns false.
 function allLong(lst) {
   // lst is an array of strings
+  let newLong = lst.filter((item) => item.length > 4);
+  return newLong.length === lst.length ? true : false;
 }
 
 console.log('Q8 - case 1', allLong(['Scott', 'Bob', 'Ric', 'Jim']));

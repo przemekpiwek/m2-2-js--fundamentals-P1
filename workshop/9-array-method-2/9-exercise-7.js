@@ -15,6 +15,9 @@
 
 function greetLong(lst) {
   // lst is an array of strings
+
+  let newLst = lst.filter((words) => words.length > 3);
+  return newLst.map(index => "Hello " + index);
 }
 // -------------------------------------------------------------------------
 console.log('Q7 greetLong()', greetLong(['Scott', 'Bob', 'Ric', 'Jim']));

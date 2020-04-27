@@ -50,7 +50,8 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q2
 // Convert the alternateRicks string to an array, so that each name ("Simple
 // Rick") is an element in that array. Log that array to the console.
-
+let alternateRickArray = alternateRicks.split(',');
+console.log(alternateRickArray);
 //
 //
 //
@@ -58,13 +59,14 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q3
 // How many Ricks have been named in alternateRicks?
 // HINT: There are multiple ways to solve this one. Maybe try a `for` loop!
-
+console.log(alternateRickArray.length);
 //
 //
 //
 //
 // Q4
 // How many characters are there in rickSaying (without spaces)?
+console.log(rickSaying.match(/\S/g).length)
 
 //
 //
@@ -73,14 +75,14 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q5
 // It turns out, Morty doesn't actually have a middle name. The `grandson`
 // string is wrong! Console Morty's name without "Antoine".
-
+console.log(grandson.slice(0,6) + grandson.slice(14))
 //
 //
 //
 //
 // Q6
 // Scary Terry is actually not an enemy. Remove him from the list and console only Rick's true enemies.
-
+console.log(enemies.replace('Scary Terry, ',''))
 //
 //
 //
@@ -94,3 +96,7 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 //   IF secret was `bluehired`
 //   AND notCode was `['blue', 'red']`
 //   THEN the answer would be `hi` (bluehired without blue and red).
+
+x = notCode.join('|');
+const regex = new RegExp(`${x}`,"g");
+console.log(secret.replace(regex,''));

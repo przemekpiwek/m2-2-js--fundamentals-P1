@@ -10,7 +10,25 @@
 
 // Write function here
 
+function calculateGrade(grades) {
+    const minGrade = {
+        A: 90,
+        B: 80,
+        C: 70,
+        D: 60,
+        F: 0
+    }
 
+    let avg = Math.round(grades.reduce((sum,num) => {
+        return (sum+num);
+    })/grades.length);
+
+    for (let key in minGrade){
+        if(minGrade[key] < avg){
+            return key;
+        }
+    }
+}
  
 // Call the function with [48, 95, 65, 48, 59, 78, 72, 65]
 

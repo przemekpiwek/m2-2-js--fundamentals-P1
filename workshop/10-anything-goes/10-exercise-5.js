@@ -13,6 +13,17 @@
 
 let armstrongNumbers = [];
 
-// write your loop here...
+for(let i=0 ; i < 1000; i++){
+    const strArr = [];
+    let sum = 0;
 
-console.log(armstrongNumbers);
+    strArr.push(...String(i));
+    let numArr = strArr.map((num) => parseInt(num));
+
+    for(let j = 0; j < numArr.length; j++){
+        sum += Math.pow(numArr[j], numArr.length);
+    }
+    if(sum === i){
+        armstrongNumbers.push(i);
+    }
+}

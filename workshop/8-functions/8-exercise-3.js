@@ -3,7 +3,9 @@
 // The returned average should also be rounded to the nearest unit. (no decimals, please!)
 
 function calculateAverage(a, b, c, d, e) {
-  // Your code here
+  let sum = a + b + c + d + e;
+  let avg = sum/5;
+  return(Math.round(avg));
 }
 
 console.log(calculateAverage(76, 60, 83, 100, 78));

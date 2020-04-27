@@ -11,7 +11,19 @@
 // characters there are in the string.
 
 function countBs(str) {
-
+    return str.match(/B/g).length;
 }
 // -------------------------------------------------------------------------
 console.log('Q1: ', countBs('BananaBabyBubbles'));
+
+//without regex:
+
+// function countBs(str) {
+//     let counter = 0;
+//     for( let i = 0; i < str.length; i++){
+//         if(str[i] === 'B'){
+//             counter++;
+//         }
+//     }
+//     return counter;
+// }

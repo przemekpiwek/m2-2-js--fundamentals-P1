@@ -16,6 +16,13 @@
 function filter(lst, func) {
   // lst is an array and f is a function
   // func takes one argument and returns a boolean (true or false)
+  let subArray = [];
+  for(let i=0; i < lst.length; i++){
+    if(func(lst[i]) === true){
+      subArray.push(lst[i]);
+    }
+  }
+  return subArray;
 }
 // -------------------------------------------------------------------------
 function keepLong(str) {
